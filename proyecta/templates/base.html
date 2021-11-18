@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>proyecta - Software de Calculos Estadisticos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link href="/assets/css/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="/assets/css/minichat.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="/assets/css/chat.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/assets/css/screen.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/assets/css/screen_ie.css"> -->
+
+		<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/minichat.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<script type="text/javascript" src="/assets/js/plugins/spinner/ui.spinner.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/spinner/jquery.mousewheel.js"></script>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/charts/excanvas.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/charts/jquery.flot.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/charts/jquery.flot.orderBars.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/charts/jquery.flot.pie.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/charts/jquery.flot.resize.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/charts/jquery.sparkline.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/charts/jquery.flot.time.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/forms/uniform.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.cleditor.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.validationEngine-en.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.validationEngine.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.tagsinput.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/autogrowtextarea.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.dualListBox.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/jquery.inputlimiter.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/forms/chosen.jquery.min.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/wizard/jquery.form.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/wizard/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/wizard/jquery.form.wizard.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/uploader/plupload.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/uploader/plupload.html5.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/uploader/plupload.html4.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/tables/datatable.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/tables/tablesort.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/tables/resizable.min.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.tipsy.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.collapsible.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.progress.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.timeentry.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.colorpicker.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.jgrowl.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.breadcrumbs.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/ui/jquery.sourcerer.js"></script>
+
+		<script type="text/javascript" src="/assets/js/plugins/calendar.min.js"></script>
+		<script type="text/javascript" src="/assets/js/plugins/elfinder.min.js"></script>
+
+		<script type="text/javascript" src="/assets/js/custom.js"></script>
+		<script type="text/javascript" src="/assets/js/chat.js"></script>
+		
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="/media/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/media/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/media/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/media/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="/media/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+
+	<body>
+		<!-- Left side content -->
+		<div id="leftSide">
+			<div class="logo">
+				<a href="/"><img src="/media/{{ empresa.logo }}" alt="" /></a>
+			</div>
+			
+			<div class="sidebarSep"></div>
+
+			<!-- Left navigation -->
+			<ul id="menu" class="nav">
+				<li class="forms">
+					<a href="#" title="" class="exp"><span>Proyecciones</span><strong>2</strong></a>
+					<ul class="sub">
+						<li>
+							<a href="/" title="">Proyección de Ventas</a>
+						</li>
+						<li>
+							<a href="/estadistica" title="">Estadísticas de proyecciones</a>
+						</li>
+					</ul>
+				</li>
+				{% if user.is_staff %}
+				<li class="forms">
+					<a href="#" title="" class="exp"><span>Administracion</span><strong>2</strong></a>
+					<ul class="sub">
+						<li>
+							<a href="/usuarios" title="">Usuarios</a>
+						</li>
+						<li>
+							<a href="/empresas" title="">Empresas</a>
+						</li>
+					</ul>
+				</li>
+				{% endif %}
+			</ul>
+		</div>
+
+		<!-- Right side -->
+		<div id="rightSide">
+
+			<!-- Top fixed navigation -->
+			<div class="topNav">
+				<div class="wrapper">
+					<div class="welcome">
+						<a href="/usuario/{{ usuario.id }}" title=""><img src="/media/{{ user.avatar }}" width="25px" height="25px" /></a><span>Bienvenido {{ user.username}} <i>({{ user.email }})</i>! </span>
+					</div>
+					<div class="userNav">
+						<ul>
+							<li>
+								<a href="/usuario/{{ usuario.id }}" title=""><img src="/assets/images/icons/topnav/profile.png" alt="" /><span>Ver Perfil</span></a>
+							</li>
+							<li>
+								<a href="/logout" title=""><img src="/assets/images/icons/topnav/logout.png" alt="" /><span>Cerrar sesion</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!-- Title area -->
+			{% block area_titulo %}
+			
+			{% endblock %}
+
+			<div class="line"> </div>
+
+			<!-- Main content wrapper -->
+			<div class="wrapper">
+
+					{% block container %}
+
+					{% block content %}
+
+					{% endblock content %}
+
+					{% endblock container %}			
+			</div>
+			
+			<!-- Footer line -->
+			<div id="footer">
+				<div class="wrapper">
+					
+				</div>
+			</div>
+			<div id="minichat" class="">
+				<div class="wrapper">
+					<div class="userNav">
+						<ul>
+							<li><a href="javascript:void(0)" title="Contacta a un Administrador" id="chat_admin"><img src="/assets/images/icons/topnav/profile.png" alt="" /><span>¿Necesitas Ayuda?</span></a></li>
+						</ul>	
+					</div>
+				</div>
+				<div id="lista_admin" style="display: none;">
+					<div class="ventana">
+					  <h2>Lista de Administradores</h2>
+					  <div class="descripcion"><p>Lista de los Administradores disponibles para poder dar respuestas a sus inquietudes</p></div>
+					  <div class="lista">
+					  	<ul>
+					  		{% load template_usuarios %}
+							{% render_logged_in_user_list %}
+					  	</ul>
+					  </div>
+					  
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/charts/chart.js"></script>
+	</body>
+</html>

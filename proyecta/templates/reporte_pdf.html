@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+</head>    
+<body>
+<style type="text/css">
+	h1{
+		text-align: center;
+	}
+ tr{
+ 	border-bottom: 1px solid #f9f9f9;
+ 	
+ }
+ .break{
+ 	-pdf-page-break;
+ }
+
+</style>
+	<table border="0" cellspacing="5" cellpadding="5">
+		
+		<tr>
+			<td><img src="{{ logo }}"  width="200" height="auto" /></td>
+			<td><h1>Empresa: {{ empresa.nombre }}</h1>
+			    <p>Product Manager: <u>{{ usuario.first_name }} {{ usuario.last_name }}</u></p>
+			    <p>Fecha del Reporte: <u>{{ fecha }}</u></p>
+			    <p>Periodo utilizado: <u>{{ periodo }}</u></p>
+			    <p>Periodo a proyectar: <u>12 Meses</u></p>
+			</td>
+		</tr>
+		
+		
+	</table>
+	<hr>
+	<br>
+	<p>La siguiente información es una proyección realizada por {{usuario.first_name}} {{ usuario.last_name }} la cual indica la estimación de ventas para el producto {{ producto }} en la sucursal {{ sucursal }} de la empresa {{ empresa }}, la estimacion es a 12 meses.</p>
+	<br>
+	<hr>
+	<h2>Grafico estadístico que muestra las ventas más la proyección a 12 meses</h2>
+		<img src="{{ grafico }}" > 
+		
+	<div class="break"> </div>
+	<br><br><br><br><br><br><br><br>
+	<h2>A continuación se lista el detalle de ventas por productos:</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Periodo</th>
+				<th>Fecha</th>
+				<th>Productos</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for venta in detalle_ventas %}
+			<tr>
+				<td height="30px">{{ forloop.counter }}</td>
+				<td>{{ venta.fecha }}</td>
+				<td>{{ venta.cantidad }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		
+	</table>
+		
+</body>
+</html>
